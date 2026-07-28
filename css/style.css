@@ -1,0 +1,538 @@
+/* ==========================================================
+   HARIHARAN K PORTFOLIO
+   Global Styles
+========================================================== */
+
+/* ==========================================================
+   GOOGLE FONTS
+========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* ==========================================================
+   ROOT VARIABLES
+========================================================== */
+
+:root{
+
+    --bg:#030712;
+    --bg2:#071529;
+
+    --primary:#3B82F6;
+    --secondary:#60A5FA;
+
+    --white:#FFFFFF;
+    --text:#E2E8F0;
+    --paragraph:#94A3B8;
+
+    --glass:rgba(255,255,255,.05);
+    --glass-border:rgba(255,255,255,.08);
+
+    --shadow:
+        0 10px 40px rgba(0,0,0,.35);
+
+    --transition:.35s ease;
+
+}
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+
+    max-width:100%;
+
+    overflow-x:clip;
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:
+        radial-gradient(circle at 15% 20%,rgba(59,130,246,.18),transparent 35%),
+        radial-gradient(circle at 85% 75%,rgba(14,165,233,.16),transparent 30%),
+        linear-gradient(135deg,#030712,#071529,#030712);
+
+    background-size:200% 200%;
+
+    animation:backgroundMove 18s ease infinite;
+
+    color:var(--white);
+
+    max-width:100%;
+
+    overflow-x:clip;
+
+}
+
+/* ==========================================================
+   MAIN CONTENT
+========================================================== */
+
+#main-content{
+
+    opacity:0;
+
+    visibility:hidden;
+
+    min-height:100vh;
+
+    background:var(--bg);
+
+    transition:.8s;
+
+}
+
+#main-content.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+/* ==========================================================
+   INTRO SECTION
+========================================================== */
+
+#intro{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    z-index:9999;
+
+}
+
+/* ==========================================================
+   PARTICLE BACKGROUND
+========================================================== */
+
+#particles{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:1;
+
+}
+
+/* ==========================================================
+   INTRO CONTENT
+========================================================== */
+
+.intro-content{
+
+    position:relative;
+
+    z-index:10;
+
+    width:min(900px,90%);
+
+    padding:70px 60px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    backdrop-filter:blur(22px);
+
+    background:var(--glass);
+
+    border:1px solid var(--glass-border);
+
+    border-radius:35px;
+
+    box-shadow:var(--shadow);
+
+}
+
+/* ==========================================================
+   INTRO TEXT
+========================================================== */
+
+.hello{
+
+    font-size:1.15rem;
+
+    letter-spacing:6px;
+
+    text-transform:uppercase;
+
+    color:var(--secondary);
+
+    margin-bottom:25px;
+
+}
+
+.name{
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:5.2rem;
+
+    font-weight:800;
+
+    line-height:1.1;
+
+    margin-bottom:18px;
+
+}
+
+.name span{
+
+    color:var(--secondary);
+
+    text-shadow:
+
+        0 0 15px rgba(96,165,250,.45),
+
+        0 0 40px rgba(96,165,250,.25);
+
+}
+
+.tagline{
+
+    font-size:2rem;
+
+    font-weight:500;
+
+    color:var(--text);
+
+    margin-bottom:28px;
+
+}
+
+.description{
+
+    max-width:720px;
+
+    font-size:1.08rem;
+
+    line-height:1.9;
+
+    color:var(--paragraph);
+
+}
+
+/* ==========================================================
+   EXPLORE BUTTON
+========================================================== */
+
+#explore-btn{
+
+    position:relative;
+
+    margin-top:50px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    padding:18px 42px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:60px;
+
+    cursor:pointer;
+
+    overflow:hidden;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:var(--white);
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    box-shadow:
+        0 0 20px rgba(59,130,246,.35),
+        0 0 45px rgba(59,130,246,.15);
+
+    transition:all .35s ease;
+
+}
+
+#explore-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:70%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.45),
+        transparent
+    );
+
+    transform:skewX(-25deg);
+
+    transition:.7s;
+
+}
+
+#explore-btn:hover::before{
+
+    left:150%;
+
+}
+
+#explore-btn:hover{
+
+    transform:translateY(-6px) scale(1.03);
+
+    box-shadow:
+        0 0 30px rgba(59,130,246,.55),
+        0 0 60px rgba(59,130,246,.30);
+
+}
+
+#explore-btn:active{
+
+    transform:scale(.96);
+
+}
+
+#explore-btn i{
+
+    transition:.35s;
+
+}
+
+#explore-btn:hover i{
+
+    transform:translateX(8px);
+
+}
+
+/* ==========================================================
+   AURORA LIGHTS
+========================================================== */
+
+.aurora{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(130px);
+
+    opacity:.45;
+
+}
+
+.aurora-1{
+
+    width:380px;
+
+    height:380px;
+
+    background:#2563EB;
+
+    top:-120px;
+
+    left:-120px;
+
+}
+
+.aurora-2{
+
+    width:330px;
+
+    height:330px;
+
+    background:#06B6D4;
+
+    right:-80px;
+
+    bottom:100px;
+
+}
+
+.aurora-3{
+
+    width:280px;
+
+    height:280px;
+
+    background:#3B82F6;
+
+    bottom:-130px;
+
+    left:45%;
+
+}
+
+/* ==========================================================
+   INTRO GLOW
+========================================================== */
+
+.intro-content::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:550px;
+
+    height:550px;
+
+    background:radial-gradient(
+        circle,
+        rgba(59,130,246,.15),
+        transparent 70%
+    );
+
+    z-index:-1;
+
+}
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+    height:2px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#020617;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#3B82F6;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#60A5FA;
+
+}
+
+/* ==========================================================
+   TEXT SELECTION
+========================================================== */
+
+::selection{
+
+    background:#3B82F6;
+
+    color:#FFFFFF;
+
+}
+
+/* ==========================================================
+                PARTICLES
+========================================================== */
+
+.particle{
+
+    position:absolute;
+
+    width:5px;
+
+    height:5px;
+
+    background:#60A5FA;
+
+    border-radius:50%;
+
+    opacity:.6;
+
+    animation:particleFloat infinite ease-in-out;
+
+}
+
+
+@keyframes particleFloat{
+
+    0%{
+
+        transform:
+        translateY(0)
+        scale(1);
+
+        opacity:.3;
+
+    }
+
+
+    50%{
+
+        transform:
+        translateY(-80px)
+        scale(1.4);
+
+        opacity:1;
+
+    }
+
+
+    100%{
+
+        transform:
+        translateY(0)
+        scale(1);
+
+        opacity:.3;
+
+    }
+
+}
+

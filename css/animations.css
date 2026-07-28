@@ -1,0 +1,342 @@
+/* ==========================================================
+                BACKGROUND ANIMATION
+========================================================== */
+
+@keyframes backgroundMove{
+
+    0%{
+
+        background-position:0% 50%;
+
+    }
+
+    50%{
+
+        background-position:100% 50%;
+
+    }
+
+    100%{
+
+        background-position:0% 50%;
+
+    }
+
+}
+
+/* ==========================================================
+                    FADE DOWN
+========================================================== */
+
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================================
+                    FADE UP
+========================================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================================
+                INTRO ANIMATIONS
+========================================================== */
+
+.hello{
+
+    opacity:0;
+
+    animation:fadeDown .8s ease forwards;
+
+}
+
+.name{
+
+    opacity:0;
+
+    animation:fadeUp .9s ease forwards;
+
+    animation-delay:.4s;
+
+}
+
+.tagline{
+
+    opacity:0;
+
+    animation:fadeUp .9s ease forwards;
+
+    animation-delay:.8s;
+
+}
+
+.description{
+
+    opacity:0;
+
+    animation:fadeUp .9s ease forwards;
+
+    animation-delay:1.2s;
+
+}
+
+#explore-btn{
+
+    opacity:0;
+
+    animation:
+        fadeUp .9s ease forwards,
+        pulseGlow 3s infinite;
+
+    animation-delay:
+        1.6s,
+        2.5s;
+
+}
+
+/* ==========================================================
+                INTRO EXIT
+========================================================== */
+
+#intro.hide{
+
+    animation:introZoomOut 1s ease forwards;
+
+}
+
+@keyframes introZoomOut{
+
+    from{
+
+        opacity:1;
+
+        transform:scale(1);
+
+        filter:blur(0);
+
+    }
+
+    to{
+
+        opacity:0;
+
+        transform:scale(1.08);
+
+        filter:blur(12px);
+
+    }
+
+}
+
+/* ==========================================================
+                    AURORA MOVEMENT
+========================================================== */
+
+.aurora{
+
+    animation:auroraFloat 18s ease-in-out infinite;
+
+}
+
+@keyframes auroraFloat{
+
+    0%{
+
+        transform:
+            translate(0,0)
+            scale(1);
+
+    }
+
+    50%{
+
+        transform:
+            translate(60px,-40px)
+            scale(1.18);
+
+    }
+
+    100%{
+
+        transform:
+            translate(0,0)
+            scale(1);
+
+    }
+
+}
+
+/* ==========================================================
+                    BUTTON PULSE
+========================================================== */
+
+#explore-btn{
+
+    opacity:0;
+
+    animation:
+        fadeUp .9s ease forwards,
+        pulseGlow 3s infinite;
+
+    animation-delay:
+        1.6s,
+        2.5s;
+
+}
+
+@keyframes pulseGlow{
+
+    0%{
+
+        box-shadow:
+            0 0 18px rgba(59,130,246,.25);
+
+    }
+
+    50%{
+
+        box-shadow:
+            0 0 45px rgba(59,130,246,.55);
+
+    }
+
+    100%{
+
+        box-shadow:
+            0 0 18px rgba(59,130,246,.25);
+
+    }
+
+}
+
+/* ==========================================================
+                INTRO GLOW FLOAT
+========================================================== */
+
+.intro-content::after{
+
+    animation:glowFloat 12s ease-in-out infinite;
+
+}
+
+@keyframes glowFloat{
+
+    0%{
+
+        transform:
+            translate(-20px,-20px)
+            scale(1);
+
+    }
+
+    50%{
+
+        transform:
+            translate(25px,20px)
+            scale(1.1);
+
+    }
+
+    100%{
+
+        transform:
+            translate(-20px,-20px)
+            scale(1);
+
+    }
+
+}
+
+/* ==========================================================
+                GLOBAL HOVER EFFECT
+========================================================== */
+
+button,
+.social-icons a,
+.nav-links a{
+
+    transition:all .35s ease;
+
+}
+
+/* ==========================================================
+                HERO TEXT REVEAL
+========================================================== */
+
+.hero-left>*{
+
+    opacity:0;
+
+    animation:fadeUp .8s ease forwards;
+
+}
+
+.hero-greeting{
+
+    animation-delay:.2s;
+
+}
+
+.hero-name{
+
+    animation-delay:.4s;
+
+}
+
+.hero-role{
+
+    animation-delay:.6s;
+
+}
+
+.hero-summary{
+
+    animation-delay:.8s;
+
+}
+
+.resume-btn{
+
+    animation-delay:1s;
+
+}
+
+.social-icons{
+
+    animation-delay:1.2s;
+
+}

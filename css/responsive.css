@@ -1,0 +1,480 @@
+/* ==========================================================
+                    TABLETS
+========================================================== */
+
+@media (max-width:1200px){
+
+    .hero{
+
+        padding:130px 6% 80px;
+
+        gap:50px;
+
+    }
+
+
+    .hero-name{
+
+        font-size:48px;
+
+    }
+
+
+    .hero-role{
+
+        font-size:26px;
+
+    }
+
+
+    .photo-container{
+
+        width:350px;
+
+        height:430px;
+
+    }
+
+}
+
+
+/* ==========================================================
+                    SMALL TABLETS
+========================================================== */
+
+
+@media (max-width:992px){
+
+
+    .navbar{
+
+        width:94%;
+
+        padding:16px 25px;
+
+    }
+
+
+    .nav-links{
+
+        gap:18px;
+
+    }
+
+
+    .hero{
+
+        flex-direction:column-reverse;
+
+        text-align:center;
+
+        padding-top:170px;
+
+    }
+
+
+    .hero-left{
+
+        text-align:center;
+
+    }
+
+
+    .hero-summary{
+
+        margin-left:auto;
+
+        margin-right:auto;
+
+    }
+
+
+    .social-icons{
+
+        justify-content:center;
+
+    }
+
+
+    .skills-grid,
+    .projects-grid,
+    .experience-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .database-card{
+
+        grid-column:auto;
+
+        max-width:none;
+
+    }
+
+
+}
+
+
+/* ==========================================================
+                    MOBILE
+========================================================== */
+
+
+@media (max-width:768px){
+
+
+    /* ---------- GLOBAL ---------- */
+
+
+    .section-title{
+
+        font-size:36px;
+
+    }
+
+
+    .section-description{
+
+        font-size:15px;
+
+        margin-bottom:45px;
+
+    }
+
+
+
+    /* ---------- NAVBAR ---------- */
+
+
+    .navbar{
+
+        top:12px;
+
+        width:92%;
+
+        padding:12px 18px;
+
+        border-radius:40px;
+
+    }
+
+
+    .logo{
+
+        font-size:24px;
+
+    }
+
+
+    /* Temporary mobile nav handling */
+
+    .nav-links{
+
+        display:none;
+
+    }
+
+
+
+    /* ---------- INTRO ---------- */
+
+
+    .intro-content{
+
+        width:92%;
+
+        padding:45px 25px;
+
+    }
+
+
+    .name{
+
+        font-size:3rem;
+
+    }
+
+
+    .tagline{
+
+        font-size:1.3rem;
+
+    }
+
+
+    .description{
+
+        font-size:15px;
+
+    }
+
+
+    #explore-btn{
+
+        padding:15px 30px;
+
+        font-size:16px;
+
+    }
+
+
+
+    /* ---------- HERO ---------- */
+
+
+    .hero{
+
+        padding:200px 25px 80px;
+
+        gap:25px;
+
+    }
+
+
+    .hero-name{
+
+        font-size:38px;
+        margin-top:15px;
+
+    }
+
+
+    .hero-role{
+
+        font-size:21px;
+
+    }
+
+
+    .hero-summary{
+
+        font-size:15px;
+
+        line-height:1.8;
+
+
+        max-width:340px;
+
+        margin-left:auto;
+
+        margin-right:auto;
+
+    }
+
+
+
+
+    .resume-btn{
+
+        padding:15px 30px;
+
+        width:auto;
+
+    }
+
+
+    .photo-container{
+
+        width:220px;
+
+        height:270px;
+
+    }
+
+
+    .social-icons{
+
+        gap:15px;
+
+    }
+
+
+    .social-icons a{
+
+        width:48px;
+
+        height:48px;
+
+    }
+
+    .menu-toggle{
+
+        background:rgba(255,255,255,.08);
+
+    }
+
+    .menu-toggle:hover{
+
+        background:rgba(96,165,250,.25);
+
+    }
+
+
+
+    /* ---------- CARDS ---------- */
+
+
+    .skill-card,
+    .project-card,
+    .experience-card,
+    .contact-card{
+
+        padding:22px;
+
+        border-radius:20px;
+
+    }
+
+
+    .skills-grid,
+    .projects-grid,
+    .experience-grid,
+    .contact-grid{
+
+        grid-template-columns:1fr;
+
+        gap:22px;
+
+    }
+
+
+
+    /* ---------- EDUCATION ---------- */
+
+
+    .education-timeline{
+
+        padding-left:0;
+
+    }
+
+
+    .education-timeline::before{
+
+        display:none;
+
+    }
+
+
+    .timeline-icon{
+
+        display:none;
+
+    }
+
+
+    .education-card{
+
+        margin-left:0;
+
+    }
+
+
+
+    /* ---------- FOOTER ---------- */
+
+
+    .footer-name{
+
+        font-size:30px;
+
+    }
+
+
+    .footer-social{
+
+        gap:15px;
+
+        flex-wrap:wrap;
+
+    }
+
+
+    .footer-social a{
+
+        width:50px;
+
+        height:50px;
+
+    }
+
+
+}
+
+
+
+/* ==========================================================
+                    SMALL PHONES
+========================================================== */
+
+
+@media (max-width:576px){
+
+
+    .hero-name{
+
+        font-size:32px;
+
+    }
+
+
+    .hero-role{
+
+        font-size:18px;
+
+    }
+
+
+    .photo-container{
+
+        width:220px;
+
+        height:270px;
+
+    }
+
+
+    .resume-btn{
+
+        width:100%;
+
+    }
+
+
+    .contact-card{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+
+    .contact-icon{
+
+        width:55px;
+
+        height:55px;
+
+    }
+
+
+    .certificate-card{
+
+        margin:0;
+
+    }
+
+
+    .footer-nav{
+
+        flex-direction:column;
+
+        gap:10px;
+
+    }
+
+
+}
